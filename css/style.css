@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+
+}
+.main-card{
+    display: flex;
+    width: max-content;
+    height: max-content;
+    border-radius: 2rem;
+    background: #a8b7b7;
+    box-shadow:  41px 41px 82px #a6a6a6,
+                 -41px -41px 82px #ffffff;
+}
+.main-card--content{
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+.main-card--secondary-content{
+    display: flex;
+}
+.main-card--content>*{
+    margin: 0.75rem;
+}
+.main-card--icon{
+    margin-top: 5rem;
+    width: 12rem;
+    height: 12rem;
+}
+.main-card--text-primary{
+    font-size: 2rem;
+}
+.main-card--misc-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.img{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.main-card--primary-text{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.main-card--secondary-text{
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-card--text-temp{
+    font-size: 6rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.temp{
+    display: flex;
+}
+.cls{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* for mobile-device */
+@media (max-width:480px){
+    .main-card--content{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-card--misc-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .main-card--secondary-content{
+        display: flex;
+    }
+    .main-card--primary-text{
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-card--icon{
+        margin: 0;
+    }
+    .main-card--text-temp{
+        margin: 0;
+    }
+    .main-card--text-location{
+        margin-top: 1rem;
+    }
+}
+/* for Tablet-devices */
+@media (max-width:380px){
+    .main-card--misc-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .main-card--secondary-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
