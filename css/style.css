@@ -79,6 +79,7 @@
         justify-content: flex-start;
     }
     .main-card--secondary-content{
+
         display: flex;
     }
     .main-card--primary-text{
@@ -103,9 +104,12 @@
         flex-direction: column;
         justify-content: flex-start;
     }
-    .main-card--secondary-content{
-        display: flex;
-        flex-direction: column;
-    }
 
 }
+
+
+/* Background  */
+.day { background: url('../assets/images/day.png'); }
+.dawn { background: url('../assets/images/dawn.png'); }
+.night { background: url('../assets/images/night.png') };
+.dusk { background: url('../assets/images/dusk.png'); }
