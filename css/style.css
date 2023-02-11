@@ -1,115 +1,417 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: monaco, Consolas, "Lucida Console", monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  background-repeat: no-repeat;
+}
+.wrapper--main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-body {
+  width: 100vw;
+  height: 100vh;
+  flex: 1;
 
+  align-items: center;
 }
-.main-card{
-    display: flex;
-    width: max-content;
-    height: max-content;
-    border-radius: 2rem;
-    background: #a8b7b7;
-    box-shadow:  41px 41px 82px #a6a6a6,
-                 -41px -41px 82px #ffffff;
+.main-body > * {
+  padding: 1rem;
 }
-.main-card--content{
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
+.wrapper--main > * {
+  margin: 1.5rem 1.5rem;
 }
-.main-card--secondary-content{
-    display: flex;
+.input-search-form {
+  width: 100%;
 }
-.main-card--content>*{
-    margin: 0.75rem;
+/*to be changed */
+
+.input-search-input {
+  border-radius: 20px;
 }
-.main-card--icon{
-    margin-top: 5rem;
-    width: 12rem;
-    height: 12rem;
+/*to be changed */
+header {
+  top: 0;
+  margin-top: 0;
+  width: 100vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 15px 10px -15px #111;
 }
-.main-card--text-primary{
-    font-size: 2rem;
+.input-search-button-image {
+  height: 2rem;
+  width: 2rem;
 }
-.main-card--misc-text{
+.input-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0rem 0.938rem 0.938rem rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  display: flex;
+  width: max-content;
+  height: max-content;
+  border-radius: 2rem;
+  /* background: #cdd5d5;
+      box-shadow:  41px 41px 82px #a6a6a6,
+                   -41px -41px 82px #ffffff; */
+}
+.main-card--content {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.main-card--secondary-content {
+  color: white;
+  display: flex;
+}
+.main-card--content > * {
+  margin: 0.75rem;
+}
+.main-card--icon {
+  margin-top: 5rem;
+  width: 12rem;
+  height: 12rem;
+}
+.main-card--text-primary {
+  color: white;
+  font-size: 2rem;
+}
+.main-card--misc-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main-card--secondary--icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.main-card--primary-text {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.main-card--secondary-text {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-card--text-temp {
+  font-size: 6rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.temp {
+  display: flex;
+}
+.cls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* for mobile-device  changed from 480px*/
+@media (max-width: 580px) {
+  input[type="text"] {
+    width: 90% !important;
+  }
+  /*akshit*/
+  .main-card {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+  /*akshit*/
+  .main-card--text-primary {
+    font-size: 3rem;
+  }
+  .main-card--text-location {
+    font-size: 1.5rem;
+  }
+  .main-card--content {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-card--misc-text {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-}
-.img{
-    width: 4.5rem;
-    height: 4.5rem;
-}
-.main-card--primary-text{
+  }
+  .main-card--secondary-content {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-.main-card--secondary-text{
-    display: flex;
+  }
+  .main-card--primary-text {
     margin: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-}
-
-.main-card--text-temp{
-    font-size: 6rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-}
-.temp{
-    display: flex;
-}
-.cls{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-/* for mobile-device */
-@media (max-width:480px){
-    .main-card--content{
-        display: flex;
-        flex-direction: column;
-    }
-    .main-card--misc-text{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .main-card--secondary-content{
-
-        display: flex;
-    }
-    .main-card--primary-text{
-        margin: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .main-card--icon{
-        margin: 0;
-    }
-    .main-card--text-temp{
-        margin: 0;
-    }
-    .main-card--text-location{
-        margin-top: 1rem;
-    }
+  }
+  .main-card--icon {
+    width: 8rem;
+    height: 8rem;
+    margin: 0;
+  }
+  .main-card--text-temp {
+    margin: 0;
+  }
 }
 /* for Tablet-devices */
-@media (max-width:380px){
-    .main-card--misc-text{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+@media (max-width: 360px) {
+    body{
+        background-size: 100vw;
     }
+  /*akshit*/
 
+  .main-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /*akshit*/
+  .input-search-input {
+    width: max-content;
+  }
+  .main-card--misc-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.weather__forecast__temperature__upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.weather__forecast__day {
+  color: whitesmoke;
+}
+.card__low {
+  display: flex;
+  align-items: center;
+}
+.card__high {
+  display: flex;
+  align-items: center;
+}
+.card__temperature__text {
+  color: whitesmoke;
+}
+.weather__forecast {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.625rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.weather__forecast__image {
+  width: 6rem;
+  height: 6rem;
+}
+.weather__forecast__low {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.weather__forecast__high {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.weather__forecast__icon {
+  max-width: 5%;
+}
+.weather__forecast__temperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.125rem;
+}
+.weather__forecast__item {
+  /* box-shadow:  20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+      background-color: rgb(151, 207, 231); */
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0rem 0.938rem 0.938rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.938rem;
+  margin: 0 0.625rem 0.625rem;
+  padding: 1.875rem 0.313rem 1.25rem;
+  box-sizing: border-box;
+  min-width: fit-content;
+  flex-grow: 1;
+  backdrop-filter: blur(0.875rem);
+}
+.weather__forecast__item:hover {
+  transform: scale(1.05);
+  transition: 350ms;
+  box-shadow: 0 0 2.5rem -2.5rem rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 1000px) {
+  .weather__forecast__item {
+    width: 40%;
+  }
+
+  .weather__forecast {
+    justify-content: center;
+  }
 }
 
+@media screen and (max-width: 815px) {
+  .weather__forecast {
+    justify-content: flex-start;
+  }
+}
+/*changed from 620px */
+@media screen and (max-width: 540px) {
+  .weather__forecast__image {
+    width: 5rem;
+    height: 5rem;
+  }
+  .weather__forecast__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0.938rem 0.938rem rgba(0, 0, 0, 0.5);
+    /* width: 5%;
+          height: 5%; */
+    /* background-color: rgba(0, 0, 0, 0.4); */
+  }
+
+  .weather__forecast__low {
+    height: 3rem;
+    width: 3rem;
+  }
+  .weather__forecast__high {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .wrapper--main > * {
+    margin: 1rem 1rem;
+  }
+  h3 {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    font-size: 1.05rem;
+  }
+  .card__temperature__text {
+    color: whitesmoke;
+    font-size: 0.85rem;
+  }
+  .weather__forecast__item {
+    padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+  }
+  .weather__forecast__temperature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.938rem;
+  }
+}
+.input-search {
+  padding: 0.125rem;
+}
+.input-search-input {
+  flex: 50%;
+  padding: 0rem;
+  text-align: right;
+}
+.input-search-button {
+  height: 1.938rem;
+  width: 1.938rem;
+}
+.input-search-image {
+  flex: 50%;
+  padding: 0.125rem;
+  text-align: left;
+}
+input[type="text"] {
+  padding: 0.313rem 0.313rem;
+  border-radius: 0.5rem;
+  background-color: rgba(107, 101, 101, 0.2);
+  width: 12.5rem;
+  line-height: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .input-search {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.error-message {
+  color: red;
+}
 
 /* Background  */
-.day { background: url('../assets/images/day.png'); }
-.dawn { background: url('../assets/images/dawn.png'); }
-.night { background: url('../assets/images/night.png') };
-.dusk { background: url('../assets/images/dusk.png'); }
+.dawn {
+  background: url("../assets/images/dawn.png");
+}
+.day {
+  background: url("../assets/images/day.png");
+}
+
+.night {
+  background: url("../assets/images/night.png");
+}
+.night header {
+  color: white;
+}
+.night .main-card--primary-text {
+  color: whitesmoke;
+}
+.night .main-card--misc-text {
+  color: whitesmoke;
+}
+.night .main-card--secondary-content {
+  color: whitesmoke;
+}
+.night input[type="text"] {
+  color: whitesmoke;
+}
+.dawn input[type="text"] {
+  color: white;
+}
+.dusk {
+  background: url("../assets/images/dusk.png");
+}
+.dawn input[type="text"] {
+  color: white;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Weather Widget</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../javascript/script.js"></script>
+</head>
+<body >
+    <!-- <header></header>
+    <div></div> for input
+    <div></div> for main card
+    <div></div> for next5days
+        block--element--modifier
+        
+-->
+    
+    <div class="main-body">
+    <header>
+        <h1>Weather Widget</h1>
+        <div class="header-container" style="text-align: right;">
+            <span id="date">Date</span>&nbsp;&nbsp;&nbsp;
+            <span id="time">Time</span>
+        </div>
+    </header>
+    
+    <div class="wrapper--main">
+    <div class="input-search">
+        <form class="input-search-form" id="form">
+            <div class="input-search-input">
+                <label for="cityname"></label>
+                <input class="input-search-text"  type="text" id="cityname" placeholder="city name" >
+            </div>
+            
+                <div class="input-search-button">
+                    <input class="input-search-button-image"  type="image" id="loc-btn" src="../assets/images/location.gif">
+                </div>
+        </form>
+        <div id="error-message" class="error-message"></div>
+        
+    </div>
+    <div class="main-card">
+        <div class="main-card--content">
+            <div class="main-card--primary-text">
+                <span class="main-card--text-primary main-card--text-location" id="location"></span>
+                <span class="main-card--text-primary main-card--text-temp" id="temperature"></span>
+            </div>
+            <div class="main-card--secondary-text">
+                <img class="main-card--icon" id="main-icon" src="../assets/icons/animation-ready/clear-day.svg">
+                <div class="main-card--secondary-content">
+                    <div class="main-card--text-secondary cls">
+                        <img class="main-card--secondary--icon" src="../assets/icons/animation-ready/pressure-high-alt.svg"><span id="high-main"></span></div>
+                    <div class="main-card--text-secondary cls">
+                        <img class="main-card--secondary--icon" src="../assets/icons/animation-ready/pressure-low-alt.svg"><span id="low-main"></span></div>
+                </div>
+            </div>
+            <div class="main-card--misc-text">
+                <div class="main-card--text-secondary cls">
+                    <img class="main-card--secondary--icon" src="../assets/icons/animation-ready/humidity.svg">
+                    <span id="humidity"></span>
+                </div>
+                <div class="main-card--text-secondary cls">
+                    <img class="main-card--secondary--icon" src="../assets/icons/animation-ready/wind.svg">
+                    <span id="windspeed"></span>
+                </div>
+                <div class="main-card--text-secondary cls" >
+                    <img class="main-card--secondary--icon" src="../assets/icons/animation-ready/barometer.svg"><span id="pressure"></span></div>
+            </div>
+        </div>
+        </div>
+         <!--5 days forecast -->
+        <div class="weather__forecast">
+            <div class="weather__forecast__item">
+                <div class="weather__forecast__temperature__upper">
+                    <img class="weather__forecast__image" id="forecast1-image" src="../assets/icons/animation-ready/falling-stars.svg" alt="clear-day">
+                    <span class="weather__forecast__day" id="day_one"></span>
+                </div>
+                <div class="weather__forecast__temperature">
+                    <div class="card__low">
+                        <img class="weather__forecast__low" src="../assets/icons/animation-ready/pressure-low-alt.svg" alt="Low" width="25" />
+                        <span class="card__temperature__text" id="low1"></span>
+                    </div>
+                    <div class="card__high">
+                        <img class="weather__forecast__high" src="../assets/icons/animation-ready/pressure-high-alt.svg" alt="High" width="25">
+                        <span class="card__temperature__text" id="high1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather__forecast__item">
+                <div class="weather__forecast__temperature__upper">
+                    <img class="weather__forecast__image"id="forecast2-image" src="../assets/icons/animation-ready/falling-stars.svg" alt="clear-day">
+                    <span class="weather__forecast__day" id="day_two"></span>
+                </div>
+                <div class="weather__forecast__temperature">
+                    <div class="card__low">
+                        <img class="weather__forecast__low" src="../assets/icons/animation-ready/pressure-low-alt.svg" alt="Low" width="25" />
+                        <span class="card__temperature__text" id="low2"></span>
+                    </div>
+                    <div class="card__high">
+                        <img class="weather__forecast__high" src="../assets/icons/animation-ready/pressure-high-alt.svg" alt="High" width="25">
+                        <span class="card__temperature__text" id="high2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather__forecast__item">
+                <div class="weather__forecast__temperature__upper">
+                    <img class="weather__forecast__image" id="forecast3-image" src="../assets/icons/animation-ready/falling-stars.svg" alt="clear-day">
+                    <span class="weather__forecast__day" id="day_three"></span>
+                </div>
+                <div class="weather__forecast__temperature">
+                    <div class="card__low">
+                        <img class="weather__forecast__low" src="../assets/icons/animation-ready/pressure-low-alt.svg" alt="Low" width="25" />
+                        <span class="card__temperature__text" id="low3"></span>
+                    </div>
+                    <div class="card__high">
+                        <img class="weather__forecast__high" src="../assets/icons/animation-ready/pressure-high-alt.svg" alt="High" width="25">
+                        <span class="card__temperature__text" id="high3"></span>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="weather__forecast__item">
+                <div class="weather__forecast__temperature__upper">
+                    <img class="weather__forecast__image" id="forecast4-image" src="../assets/icons/animation-ready/falling-stars.svg" alt="clear-day">
+                    <span class="weather__forecast__day" id="day_four"></span>
+                </div>
+                <div class="weather__forecast__temperature">
+                    <div class="card__low">
+                        <img class="weather__forecast__low" src="../assets/icons/animation-ready/pressure-low-alt.svg" alt="Low" width="25" />
+                        <span class="card__temperature__text" id="low4"></span>
+                    </div>
+                    <div class="card__high">
+                        <img class="weather__forecast__high" src="../assets/icons/animation-ready/pressure-high-alt.svg" alt="High" width="25">
+                        <span class="card__temperature__text" id="high4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather__forecast__item">
+                <div class="weather__forecast__temperature__upper">
+                    <img class="weather__forecast__image" id="forecast5-image" src="../assets/icons/animation-ready/falling-stars.svg" alt="clear-day">
+                    <span class="weather__forecast__day" id="day_five"></span>
+                </div>
+                <div class="weather__forecast__temperature">
+                    <div class="card__low">
+                        <img class="weather__forecast__low" src="../assets/icons/animation-ready/pressure-low-alt.svg" alt="Low" width="25" />
+                        <span class="card__temperature__text" id="low5"></span>
+                    </div>
+                    <div class="card__high">
+                        <img class="weather__forecast__high" src="../assets/icons/animation-ready/pressure-high-alt.svg" alt="High" width="25">
+                        <span class="card__temperature__text" id="high5"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
